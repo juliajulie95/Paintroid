@@ -49,6 +49,7 @@ apply plugin: 'pmd'
 apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.getkeepsafe.dexcount'
 apply plugin: 'kotlin-android'
+apply plugin: 'maven'
 
 apply from: 'gradle/adb_tasks.gradle'
 apply from: 'gradle/code_quality_tasks.gradle'

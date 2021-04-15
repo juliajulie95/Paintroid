@@ -82,15 +82,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        signedRelease {
-        }
-        debug {
-            testCoverageEnabled = project.hasProperty('enableCoverage')
-            // Multidex is required as espresso and mockito/bytebuddy are adding more functions
-            // than should be allowed by law.
-            // See https://github.com/mockito/mockito/issues/1112
-            multiDexEnabled true
-        }
     }
 
     lintOptions {

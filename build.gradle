@@ -55,4 +55,13 @@ allprojects {
         google()
         jcenter()
     }
+    project.plugins.whenPluginAdded { plugin ->
+        if ('com.android.build.gradle.LibraryPlugin'.equals(plugin.class.name)) {
+            project.android.variantFilter {
+                if (it.buildType.name.equals('debug') || it.buildType.name.equals('signedRelease')) {
+                    it.ignore = true
+                }
+            }
+        }
+    }
 }
